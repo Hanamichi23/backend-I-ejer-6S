@@ -2,3 +2,32 @@ server:
   port: ${PORT:8081}
 
 images_api_url: https://www.image-storage.com/
+
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    # Es default
+    fetch-registry: true
+    # Es default
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
+
+management:
+  endpoint:
+    info:
+      # Es default
+      enabled: true
+  info:
+    env:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: info
+
+info.app.name: imagen-service
+info.app.version: 1.0.0
+info.app.description: Get the URL for your new image upload!
+info.svc.intanceid: 1
