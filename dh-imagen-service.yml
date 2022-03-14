@@ -1,0 +1,4 @@
+server:
+  port: ${PORT:8081}
+
+images_api_url: https://www.image-storage.com/
